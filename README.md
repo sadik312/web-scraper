@@ -12,3 +12,6 @@ Libraries:
     `cd envName`
 - Activate virtual environment
     `source bin/activate`
+
+### Install BeautifulSoup
+- `pip install beautifulsoup4`
