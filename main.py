@@ -1,10 +1,9 @@
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import requests
 
-page = urlopen("https://weimergeeks.com/examples/scraping/example1.html")
-soup = BeautifulSoup(page, "html.parser")
-heading = soup.h1
-print(heading.text)
-city_list = soup.find_all("td", class_="city")
-for city in city_list:
-    print(city.get_text())
+url = "https://weimergeeks.com/examples/scraping/example1.html"
+page = requests.get(url)
+soup = BeautifulSoup(page.text, "html.parser")
+cities = soup.select('td.city')
+for city in cities:
+    print(city.text)
