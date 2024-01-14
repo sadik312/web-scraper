@@ -1,9 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
+import openpyxl
 
-url = "https://weimergeeks.com/examples/scraping/example1.html"
-page = requests.get(url)
-soup = BeautifulSoup(page.text, "html.parser")
-cities = soup.select('td.city')
-for city in cities:
-    print(city.text)
+# Scrape Amazon website
+
+# HTTP GET request to specified URL
+
+# Check if request was successful
+
+# parse HTML content and extract relevant data
+
+# Extract information from search results
+
+# Export data to Excel spreadsheet
